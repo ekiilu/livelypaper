@@ -2,7 +2,6 @@
  * 
  * Name space lp.data
  *
- * Each Module corresponds to an independent unit of functionality
  *
  * Author:
  * Eric Kiilu - 2013 (c)
@@ -16,7 +15,7 @@
  * Version 0.0.0.1
  *
  */
- 
+
 define(
 ["../../src/lp/lp.base.object"],function(object){
 	var should = chai.should();

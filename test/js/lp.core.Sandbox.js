@@ -20,9 +20,11 @@
 define(
 ["../../src/lp/lp.core.sandbox"],function( sandbox ){
 	var should = chai.should();
+
 	var spy = sinon.spy();
 	
 	describe("lp.core.sandbox",function(){
+
 		describe("#sandbox",function(){
 			
 			it("should be able to setup the id of the sandbox",function(){
@@ -40,10 +42,8 @@ define(
 			  	var mysandbox = new sandbox("lp.core.test");
 			  	var box  = sinon.spy(mysandbox,"getBox");
 			  	var box_element = box();
-			  	box_element.id.should.equal("lp.core.test");
-							
+			  	box_element.id.should.equal("lp.core.test");				
 			})
-			
 		})
 	})
 }

@@ -2,7 +2,6 @@
  * 
  * Name space lp.data
  *
- * Each Module corresponds to an independent unit of functionality
  *
  * Author:
  * Eric Kiilu - 2013 (c)
@@ -16,14 +15,21 @@
  * Version 0.0.0.1
  *
  */
- 
+
 define(
-["../../src/lp/lp.core.Module"],function(module){
+["../../src/lp/lp.core.Module"],function(Module){
 	var should = chai.should();
 	describe("Module",function(){
 		describe("#module",function(){
-			it("Module Item should exist",function(){
-				should.exist(module);
+			it("should return sandbox",function(){
+				myModule = new Module("lp.core.Module.document",function(){
+					return "hello";
+				});
+
+				var sandboxElement = myModule.getSandBox();
+				var sandboxId = sandboxElement.getId();
+
+				sandboxId.should.equal("lp.core.Module.document");
 			})
 		})
 	})

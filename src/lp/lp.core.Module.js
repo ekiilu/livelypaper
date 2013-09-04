@@ -2,7 +2,6 @@
  * 
  * Name space lp.core.Module
  *
- * Each Module corresponds to an independent unit of functionality
  *
  * Author:
  * Eric Kiilu - 2013 (c)
@@ -30,11 +29,10 @@ define(
 			var sandbox,
 				module;
 
-			sandbox = builder.getSandBox();//let the builder get the sandbox
-
-			sandbox = builder.buildSandbox(id);
-
+			sandbox = builder.getSandbox(id);//let the builder get the sandbox
+			//return a module
 			module = creator(sandbox);
+		
 
 			//return the id of the module
 			function getId(){
@@ -49,6 +47,13 @@ define(
 			//return the underlying module
 			function getModule(){
 				return module;
+			}
+
+
+			return {
+				getId: getId,
+				getModule: getModule,
+				getSandBox: getSandBox
 			}
 
 		}

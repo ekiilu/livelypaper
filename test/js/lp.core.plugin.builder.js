@@ -2,7 +2,6 @@
  * 
  * Name space lp.data
  *
- * Each Module corresponds to an independent unit of functionality
  *
  * Author:
  * Eric Kiilu - 2013 (c)
@@ -16,18 +15,23 @@
  * Version 0.0.0.1
  *
  */
- 
+
 define(
 ["../../src/lp/lp.core.plugin.builder"],
 function( builder ){
 	var should = chai.should();
-	describe("Base",function(){
-		describe("#base",function(){
-			it("Builder Object should exist",function(){
-				console.log(builder);
+	describe("Plugin Builder",function(){
+		describe("#lp.core.plugin.builder",function(){
+			it("should have a box div existing in the current document",function(){
+			 	sandBoxBuilder = builder;
+
+				var sandboxSpy = sinon.spy(sandBoxBuilder,"getSandbox");
+
+				var boxElement = sandboxSpy("lp.core.test");
+
+				should.exist(boxElement);
+
 			})
-
-
 		
 		})
 	})

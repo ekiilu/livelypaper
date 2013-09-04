@@ -1,6 +1,6 @@
 /*
  * 
- * Name space lp.core.plugin.builder
+ * Name space lp.base.type
  *
  * Each Module corresponds to an independent unit of functionality
  *
@@ -23,16 +23,16 @@ define([
 		plugin,
 		Sandbox
 		){
-		function getSandbox(id){
 
-			var sandbox = new Sandbox();
-
-			sandbox.setId( id ); //set id of the sandbox
-
-			//Do all the other things in here including adding plugins to the sandbox
-			return sandbox;
-		}
-		
-		plugin.builder =getSandbox;
+	plugin.builder = function(){
+			function getSandbox(id){
+				var sandbox = new Sandbox(id);
+				//Do all the other things in here including adding plugins to the sandbox
+				return sandbox;
+			}
+			return{
+				getSandbox: getSandbox
+			}
+		}();
 		return plugin.builder;
 	});

@@ -2,7 +2,6 @@
  * 
  * Name space lp
  *
- * Each Module corresponds to an independent unit of functionality
  *
  * Author:
  * Eric Kiilu - 2013 (c)
