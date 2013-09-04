@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Test for lp.data.js </title>
+	<link rel="stylesheet" href="../src/mocha/mocha.css" />
+	<script src="../src/mocha/mocha.js"></script>
+	<script src="../src/jquery/jquery.min.js"></script>
+	<script src="../src/chai/chai.js"></script>
+	<script src="mocha-setup.js"></script>
+	<script src="../src/require/require.js"></script>
+</head>
+<body>
+
+<div id="mocha"></div>
+
+<script>
+    require(
+      ["js/lp.data"],
+      function(){
+      	mocha.run();
+      });
+</script>
+
+</body>
+</html>
+
