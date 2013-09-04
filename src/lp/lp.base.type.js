@@ -1,11 +1,22 @@
 /*
-This checks the type of the a given javascript object
+ * 
+ * Name space lp.base.type
+ *
+ * Each Module corresponds to an independent unit of functionality
+ *
+ * Author:
+ * Eric Kiilu - 2013 (c)
+ *
+ * LICENSE http://creativecommons.org/licenses/by-nc-sa/3.0/
+ *
+ * Copyright: 
+ *
+ * Eric Kiilu
+ * 
+ * Version 0.0.0.1
+ *
+ */
 
-//Number of arguments and return value
-1 - Returns false
-2 - CHecks whether argument 1 is of the second argument
-> 2 - It is assumed that the objects are nested  
-*/
 define(
 	[
 	"./lp.base"
