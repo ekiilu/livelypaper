@@ -17,10 +17,12 @@
  *
  */
 
-define(["./lp"],function(lp){
+define(
+	["./lp"],
+	function(lp){
+
 	//Private variables
 	lp.core = {};
 	
 	return lp.core;
-
 });

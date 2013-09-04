@@ -17,10 +17,10 @@
  *
  */
 
-define([
-	"./lp.core",
-	"./lp.core.plugin.builder"
-
+define(
+	[
+		"./lp.core",
+		"./lp.core.plugin.builder"
 	],function(
 		core,
 		builder
@@ -32,23 +32,27 @@ define([
 
 			sandbox = builder.getSandBox();//let the builder get the sandbox
 
-
 			sandbox = builder.buildSandbox(id);
+
 			module = creator(sandbox);
 
 			//return the id of the module
 			function getId(){
 				return id;
 			}
+
 			//return sandbox
 			function getSandBox(){
 				return sandbox;
 			}
+
 			//return the underlying module
 			function getModule(){
 				return module;
 			}
 
 		}
+
+		return core.Module;
 
 	})

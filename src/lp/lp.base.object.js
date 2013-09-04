@@ -23,12 +23,10 @@ define(
 	"./lp.base.type"
 	],function(
 		base,
-		core,
+		jqcore,
 		type
 		){
-
-
-	//Check whether object has certain propert and is not empty
+	//Check whether object has certain property and is not empty
 	function has(object, property){
 		if(!type.isAvailable(object)){
 			return false;
@@ -50,7 +48,7 @@ define(
 	//deep copy of an object 
 	function deepClone(object){
 
-		var newObject = core.extend(true,{},object)
+		var newObject = jqcore.extend(true,{},object)
 		return newObject;
 	}
 

@@ -17,4 +17,15 @@
  *
  */
  
-mocha.setup('bdd');
+define(
+["../../src/lp/lp.core.Module"],function(module){
+	var should = chai.should();
+	describe("Module",function(){
+		describe("#module",function(){
+			it("Module Item should exist",function(){
+				should.exist(module);
+			})
+		})
+	})
+}
+);

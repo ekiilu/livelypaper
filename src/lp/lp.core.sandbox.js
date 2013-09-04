@@ -17,18 +17,26 @@
  *
  */
 
-define([
-"./lp.core",
-"./lp.base.object",
-"../jquery/src/core",
-"../jquery/src/selector"
-],function(core,object,jqcore,jqselector,jqsupport){
+define(
+[
+	"./lp.core",
+	"./lp.base.object",
+	"../jquery/src/core",
+	"../jquery/src/selector"
+],
+function(
+	core,
+	object,
+	jqcore,
+	jqselector,
+	jqsupport
+	){
+	sandbox = function(sandboxId){
 
-
-	sandbox = function(){
-		var id,
+		var id = sandboxId,
 			box = null;
 
+		//Change the id through this value
 		function setId(_id){
 			id =_id;
 		}
@@ -36,20 +44,18 @@ define([
 		function getId(){
 			return id;
 		}
+
 		function getBox(){
 
 			//check if box is already created if not create it
 			if(object.has(box)){
-				box = jqcore("#nice");
+				box = jqcore("#"+id);
 				return box;
 			}
 			else{
 				//create the element and append it 
 				var div = document.createElement("div");
 				div.id = id;
-				div.height = "300";
-				div.width = "300";
-				div.background = "blue";
         		document.body.appendChild(div);
         		//Set the box to be the newly created div
         		box = div;

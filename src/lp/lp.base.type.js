@@ -18,24 +18,17 @@
  */
 
 define(
-	[
-	"./lp.base"
-	],
+	["./lp.base"],
 	function(base){
 
 	base.type ={};
 
-		 //This function determines whether are particular object exists or is null returns false if it does not exist
+     //This function determines whether are particular object exists or is null returns false if it does not exist
     function isAvailable(value){
-
-
 
     	var length = arguments.length, 
     				 last = length -1; 
     				 last_argument = arguments[length-1];
-
-
-
 
     	if(length <= 0){
     		return false;
@@ -75,8 +68,6 @@ define(
     		 }
     		 else if (type === 'string'){ 
 
-    		 	
-
     		 	var internalClass = Object.prototype
     		 						.toString
     		 						.call(value)
@@ -102,7 +93,6 @@ define(
 
     	}
     }
-
    
     base.type = {
   		isAvailable: isAvailable
