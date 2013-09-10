@@ -24,7 +24,7 @@ define(
 			//console.log(DocumentModule);
 			 //DocumentModule.start();
 			 docs = new DocumentModule();
-			 docs.render({mode: "flipbook"});
+			 docs.render();
 			})
 		})
 	})

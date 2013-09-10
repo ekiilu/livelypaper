@@ -11,12 +11,12 @@ function(Shape){
 
 
 		 function draw(){
-			ctx.fillStyle = color;
+			ctx.fillStyle ="rgba(0, 0, 200, 0.5)";
 			ctx.beginPath();
 			ctx.arc(x,y,radius,0,Math.PI*2,true);
 			ctx.closePath();
 			ctx.fill();
-			ctx.fillStyle ="#ffffff";
+			
 		}
 
 		function getX(){
