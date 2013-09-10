@@ -17,16 +17,12 @@
  */
 define(
 ["../../src/lp/lp.core.Module.Doc"],function(DocumentModule){
-	var should = chai.should();
-	describe("Docuament Module",function(){
-		describe("#document module",function(){
-			it("should have an element id on the document",function(){
-			//console.log(DocumentModule);
 			 //DocumentModule.start();
 			 docs = new DocumentModule();
 			 docs.render({mode: "flipbook"});
-			})
-		})
-	})
+	
 }
 );
+
+
+

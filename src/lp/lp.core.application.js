@@ -16,22 +16,26 @@
  *
  */
 define(
-	["./lp.core",
-	"./lp.core.Module.doc"],
+	[
+	"./lp.core",
+	"./lp.core.Module.Doc"
+	],
 	function(
 		core,
-		doc
+		Doc
 		){
 	core.application = function(){
 		
 		function startAll(){
-			console.log("hello world");
-			hello = new doc();
-			hello.start();
+			hello = new Doc();
+			hello.render({mode: "flipbook"});
+
+
 		}
 
 		function run(){
-			document.addEventListener("load", startAll(), true);
+
+			window.addEventListener("load", startAll(), true);
 		}
 
 		return {

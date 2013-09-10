@@ -23,6 +23,7 @@ define(
 			it("should have an element id on the document",function(){
 			//console.log(DocumentModule);
 			 Application.run();
+			 console.log("Application running");
 			 
 			})
 		})

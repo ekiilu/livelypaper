@@ -1,0 +1,93 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Test for ĺp.core.Module </title>
+
+	<script src="../src/jquery/jquery.min.js"></script>
+
+	<script src="../src/require/require.js"></script>
+
+	<style>
+	#gameArea {
+		position: absolute;
+		left: 50%;
+		background-color: green;
+		top: 50%;
+	}
+	#gameCanvas{
+		width: 100%;
+		height: 100%;
+	}
+
+	#statsPanel{
+		position: absolute;
+		width: 100%;
+		height: 8%;
+		bottom: 0;
+		opacity: 0.8;
+		background-color: "green";
+	}
+	</style>
+</head>
+<body>
+
+<div id="gameArea">
+	<canvas id="gameCanvas"></canvas>
+	<div id="statsPanel"> hello</div>
+</div>
+
+
+<script>
+function resizeGame() {
+    var gameArea = document.getElementById('gameArea');
+    var widthToHeight = 5 / 3;
+    var newWidth = window.innerWidth;
+    var newHeight = window.innerHeight;
+    var newWidthToHeight = newWidth / newHeight;
+    
+    if (newWidthToHeight > widthToHeight) {
+        newWidth = newHeight * widthToHeight;
+        gameArea.style.height = newHeight + 'px';
+        gameArea.style.width = newWidth + 'px';
+    } else {
+        newHeight = newWidth / widthToHeight;
+        gameArea.style.width = newWidth + 'px';
+        gameArea.style.height = newHeight + 'px';
+    }
+    
+    gameArea.style.marginTop = (-newHeight / 2) + 'px';
+    gameArea.style.marginLeft = (-newWidth / 2) + 'px';
+    
+    var gameCanvas = document.getElementById('gameCanvas');
+    var ctx = gameCanvas.getContext("2d");
+  
+    
+
+
+    gameCanvas.width = newWidth;
+    gameCanvas.style.background ="#03233e";
+
+
+    gameCanvas.height = newHeight;
+
+
+    ctx.fillStyle ="yellow";
+	ctx.beginPath();
+	ctx.arc(100,100,60,0,Math.PI*2,true);
+	ctx.closePath();
+	ctx.fill();
+	
+}
+
+
+
+resizeGame();
+window.addEventListener("resize", resizeGame, false);
+window.addEventListener("orientationchange", resizeGame,false);
+
+</script>
+
+
+</body>
+</html>
+
